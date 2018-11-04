@@ -3,7 +3,10 @@ package data_readers;
 import org.apache.poi.common.usermodel.HyperlinkType;
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.hssf.util.HSSFColor;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.*;
 
 import java.io.FileInputStream;
@@ -15,10 +18,10 @@ public class Excel_Reader {
     public String path;
     public FileInputStream fis = null;
     public FileOutputStream fileOut = null;
-     XSSFWorkbook workbook = null;
-     XSSFSheet sheet = null;
-     XSSFRow row = null;
-     XSSFCell cell = null;
+    XSSFWorkbook workbook = null;
+    XSSFSheet sheet = null;
+    XSSFRow row = null;
+    XSSFCell cell = null;
 
     public Excel_Reader(String path) {
 
@@ -35,6 +38,21 @@ public class Excel_Reader {
     }
     // returns the row count in a sheet
 
+    // to run this on stand alone
+    public static void main(String arg[]) {
+
+        // System.out.println(filename);
+        Excel_Reader datatable = null;
+
+        /*
+         * datatable = new Xls_Reader(System.getProperty("user.dir")+
+         * "\\src\\com\\qtpselenium\\xls\\Controller.xlsx"); for(int col=0 ;col<
+         * datatable.getColumnCount("TC5"); col++){
+         * System.out.println(datatable.getCellData("TC5", col, 1)); }
+         */
+    }
+    // returns the data from a cell
+
     public int getRowCount(String sheetName) {
         int index = workbook.getSheetIndex(sheetName);
         if (index == -1)
@@ -46,7 +64,6 @@ public class Excel_Reader {
         }
 
     }
-    // returns the data from a cell
 
     public String getCellData(String sheetName, String colName, int rowNum) {
         try {
@@ -258,7 +275,6 @@ public class Excel_Reader {
             // hlink_style.setWrapText(true);
 
 
-
             //XSSFHyperlink link = createHelper.createHyperlink(XSSFHyperlink.LINK_FILE);
             XSSFHyperlink link = createHelper.createHyperlink(HyperlinkType.FILE);
             link.setAddress(url);
@@ -450,20 +466,6 @@ public class Excel_Reader {
         }
         return -1;
 
-    }
-
-    // to run this on stand alone
-    public static void main(String arg[]) {
-
-        // System.out.println(filename);
-        Excel_Reader datatable = null;
-
-        /*
-         * datatable = new Xls_Reader(System.getProperty("user.dir")+
-         * "\\src\\com\\qtpselenium\\xls\\Controller.xlsx"); for(int col=0 ;col<
-         * datatable.getColumnCount("TC5"); col++){
-         * System.out.println(datatable.getCellData("TC5", col, 1)); }
-         */
     }
 
 }

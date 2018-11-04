@@ -7,22 +7,24 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Ebay_HomePage extends WebDriverHandler {
 
+    //Page Objects
     @FindBy(id = "gh-ug")
     WebElement _greetingMessage;
 
     @FindBy(id = "gh-p-2")
     WebElement _sellLink;
 
-
-    public Ebay_HomePage(){
+    //Initialize Page Objects
+    public Ebay_HomePage() {
         PageFactory.initElements(driver, this);
     }
 
-    public String getGreetingMessage(){
+    //Perform action on Page Objects
+    public String getGreetingMessage() {
         return _greetingMessage.getText();
     }
 
-    public Ebay_SellPage clickSellLink(){
+    public Ebay_SellPage clickSellLink() {
 
         _sellLink.click();
         return new Ebay_SellPage();

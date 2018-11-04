@@ -19,17 +19,20 @@ public class UMP_ViewSongListTest extends MobileDriverHandler {
         launchApp();
         ump_landingPage = new UMP_LandingPage();
     }
+
     @Test(priority = 1)
-    public void verify_if_header_is_displayed(){
+    public void verify_if_header_is_displayed() {
 
         ump_landingPage.isHeaderDisplayed();
         Assert.assertTrue(true);
     }
+
     @Test(priority = 2)
-    public void select_album(){
+    public void select_album() {
 
         ump_albumPage = ump_landingPage.viewAlbum();
     }
+
     @Test(priority = 3)
     public void verify_album_name() {
 
@@ -37,8 +40,9 @@ public class UMP_ViewSongListTest extends MobileDriverHandler {
         Assert.assertEquals(ump_albumPage.getAlbumName(), "The Kyoto Connection");
 
     }
+
     @AfterClass
-    public void tearDown(){
+    public void tearDown() {
         closeApp();
     }
 }

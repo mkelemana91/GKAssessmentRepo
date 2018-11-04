@@ -8,18 +8,18 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UMP_AlbumPage extends MobileDriverHandler {
 
-
-
+    //Page objects
     @AndroidFindBy(id = "com.example.android.uamp.next:id/subtitle")
     MobileElement _albumNameLabel;
 
-
-    public UMP_AlbumPage(){
-        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver),this);
+    //Initialize Page Objects
+    public UMP_AlbumPage() {
+        PageFactory.initElements(new AppiumFieldDecorator(mobileDriver), this);
 
     }
 
-    public String getAlbumName(){
+    //Perform action on Page Objects
+    public String getAlbumName() {
         return _albumNameLabel.getText();
     }
 

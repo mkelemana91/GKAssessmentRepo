@@ -15,12 +15,13 @@ public class WebDriverHandler {
     public static WebDriver driver;
     public static Properties prop;
 
+    //Load webconfig.properties file
     public WebDriverHandler() {
 
         prop = new Properties();
 
         try {
-            FileInputStream propFile = new FileInputStream(System.getProperty("user.dir")+
+            FileInputStream propFile = new FileInputStream(System.getProperty("user.dir") +
                     "/src/main/resources/webconfig.properties");
             prop.load(propFile);
         } catch (FileNotFoundException e) {
@@ -30,13 +31,14 @@ public class WebDriverHandler {
         }
     }
 
-    public void startBrowser(){
+    //Initialize driver and start browser
+    public void startBrowser() {
 
         String browserName = prop.getProperty("browser");
 
-        if("chrome".equalsIgnoreCase(browserName))
+        if ("chrome".equalsIgnoreCase(browserName))
             driver = new ChromeDriver();
-        else if("firefox".equalsIgnoreCase(browserName))
+        else if ("firefox".equalsIgnoreCase(browserName))
             driver = new FirefoxDriver();
         else
             System.out.print("unable to start " + browserName + " browser");
@@ -47,10 +49,10 @@ public class WebDriverHandler {
 
     }
 
-    public void closeBrowser(){
+    //Tear down method - return driver into its initial state
+    public void closeBrowser() {
 
         driver.manage().deleteAllCookies();
-        //driver.close();
         driver.quit();
 
     }

@@ -16,14 +16,15 @@ public class Ebay_SellPage extends WebDriverHandler {
     @FindBy(id = "sbtBtn")
     WebElement _listYourItemButton;
 
-    public Ebay_SellPage(){
+    public Ebay_SellPage() {
         PageFactory.initElements(driver, this);
     }
 
-    public WebElement selectCountry(){
-      return  _countryDropdownList;
+    public WebElement selectCountry() {
+        return _countryDropdownList;
     }
-    public void captureSellDetails(String address){
+
+    public void captureSellDetails(String address) {
 
         _addressTextbox.sendKeys(address);
         _listYourItemButton.click();
