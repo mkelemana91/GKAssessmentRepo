@@ -18,6 +18,16 @@ Chrome Web browser
 
 ```
 
+## Installing - following the instructions from the links
+```bash
+Download and Install:
+1.	IntelliJ IDE  - https://www.guru99.com/intellij-selenium-webdriver.html#2
+2.	Android SDK - https://www.guru99.com/introduction-to-appium.html#22
+3.	Appium Desktop - https://developer.android.com/studio/install
+4.	JRE and JDK  - https://docs.oracle.com/javase/7/docs/webnotes/install
+5.	Chrome - https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&hl=en-GB
+```
+
 ## Framework
 ### Tools 
 ```bash
