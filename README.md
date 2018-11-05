@@ -67,7 +67,6 @@ To execute each Class, navigate to the respective class > right-click on it > ru
 3.	Type adb devices on your cmd to make sure that your device is connected
 4.	Install the apk into your android device using adb install command and path to the apk
 5.	Change the Platform version in mobileconfig.properties file to match your device OS version
-
-Navigate to the UMP_ViewSongListTest class > Right-click and run using the TestNG
+6. Navigate to the UMP_ViewSongListTest class > Right-click and run using the TestNG
 
 ```
