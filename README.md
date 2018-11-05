@@ -31,15 +31,19 @@ Programming Language: Java
 ### Design
 ```bash
 APK, Excel file and drivers stored within framework for ease of access and use. Making the solution portable.
-
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/framework-design-1.png)
+```bash
 Framework consists of following modules / packages:
-•	data_readers (contains class to excel read data source), 
-•	driver_handlers (web & mobile driver initialization classes), 
-•	pages (page factory for mobile and web applications), 
-•	resources(mobile and web config.properties files, 
-•	MobileEngine (for mobile tests) and WebEngine (for Web tests)
+*	data_readers (contains class to excel read data source), 
+*	driver_handlers (web & mobile driver initialization classes), 
+*	pages (page factory for mobile and web applications), 
+*	resources(mobile and web config.properties files, 
+*	MobileEngine (for mobile tests) and WebEngine (for Web tests)
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/framework-design-2.png)
 
-
+```bash
 TestNG annotations are used in both Web and Mobile tests following the same structure:
 
 @BeforeClass – This is the precondition / setup of the test
@@ -51,23 +55,50 @@ TestNG annotations are used in both Web and Mobile tests following the same stru
 
 ```bash
 Open Edit run/debug configuration dialog
-
-Select Ebay_SellItemTest Classfor executing Web Application tests. Other UMP_ViewSongListTest Class for executing Mobile App tests.
-
-To execute each Class, navigate to the respective class > right-click on it > run using the respective configuration set on previous step
- 
-
 ```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/edit%20config-1.png)
+```bash
+Select Ebay_SellItemTest Classfor executing Web Application tests. Other UMP_ViewSongListTest Class for executing Mobile App tests.
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/edit%20config-2.png)
+```bash
+To execute each Class, navigate to the respective class > right-click on it > run using the respective configuration set on previous step
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/edit%20config-3.png)
+```bash
+Expected output
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/expected-output-1.png)
 
 ### To execute Mobile Tests
 
 ```bash
 1.	Open Appium Desktop and Start Appium Server 
-2.	Connect Android device to your machine
-3.	Type adb devices on your cmd to make sure that your device is connected
-4.	Install the apk into your android device using adb install command and path to the apk
-5.	Change the Platform version in mobileconfig.properties file to match your device OS version
-
-Navigate to the UMP_ViewSongListTest class > Right-click and run using the TestNG
-
 ```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/appium-desktop.png)
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/Appium-running.png)
+```bash
+2.	Connect Android device to your machine
+```
+```bash
+3.	Type adb devices on your cmd to make sure that your device is connected
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/adb-devices.png)
+```bash
+4.	Install the apk into your android device using adb install command and path to the apk
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/adb-install.png)
+```bash
+5.	Change the Platform version in mobileconfig.properties file to match your device OS version
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/config-prop-file.png)
+
+```bash
+6.	Navigate to the UMP_ViewSongListTest class > Right-click and run using the TestNG
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/mobile-class.png)
+
+```bash
+Expected output
+```
+![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/expected-output-2.png)
