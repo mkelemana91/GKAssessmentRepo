@@ -35,16 +35,17 @@ APK, Excel file and drivers stored within framework for ease of access and use. 
 ![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/framework-design-1.png)
 ```bash
 Framework consists of following modules / packages:
-*	data_readers (contains class to excel read data source), 
-*	driver_handlers (web & mobile driver initialization classes), 
-*	pages (page factory for mobile and web applications), 
-*	resources(mobile and web config.properties files, 
-*	MobileEngine (for mobile tests) and WebEngine (for Web tests)
+•	data_readers (contains class to manipulate excel data source), 
+•	driver_handlers (web and mobile driver initialization classes), 
+•	pages (page factory for mobile and web applications), 
+•	resources(mobile and web config.properties files, 
+•	MobileEngine (for mobile tests) and WebEngine (for Web tests)
+
 ```
 ![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/framework-design-2.png)
 
 ```bash
-TestNG annotations are used in both Web and Mobile tests following the same structure:
+Web and Mobile tests use TestNG annotations following the same structure:
 
 @BeforeClass – This is the precondition / setup of the test
 @Test – the actual test steps
@@ -85,7 +86,7 @@ Expected output
 ```
 ![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/adb-devices.png)
 ```bash
-4.	Install the apk into your android device using adb install command and path to the apk
+4.	Install the apk into your android device using adb install and path to the apk
 ```
 ![](https://github.com/mkelemana91/GKAssessmentRepo/blob/master/README%20images/adb-install.png)
 ```bash
